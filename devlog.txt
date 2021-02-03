@@ -6,10 +6,15 @@ Separate devlog entries with a newline.
 Most recent entry at the bottom.
 Each entry should begin with the following format: firstL -- TIMESTAMP\n ( e.g.: topherM -- 1999-12-31 23:59 )
 
-HelenaW -- 2021-1-17 18:07
+helenaW -- 2021-01-17 18:07
 We have EMBARKED upon our journey! Submodule linked, apache functional, and sunshine and flowers. :)
 
-HelenaW -- 2021-1-24 19:00
+helenaW -- 2021-01-24 19:00
 Today is a sad day. We've spent almost 2 hours working on le website, but unfortunately, we have been thwarted by apache being apache. We don't know WHAT is going wrong, or WHY it's going wrong, only that we've torched our droplets and it still no workey.
 The closest we got was through Jessica's droplet, where we managed to briefly host an index page. It was in a directory with the IP address as the name, and simply listed the files present in that directory. Alas, it then went kaput when we started trying to make it more functional, and even when we reversed all of our changes, it was not fixed.
 WOE IS US!
+
+jessicaY -- 2021-02-03 17:37 
+Copied over files from droplet into repo.
+
+
