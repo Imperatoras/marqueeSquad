@@ -17,4 +17,42 @@ WOE IS US!
 jessicaY -- 2021-02-03 17:37 
 Copied over files from droplet into repo.
 
+jessicaY -- 2021-02-03 21:19
+Got app working on droplet pulling files from repo. Tbh don't really know exactly what I did; brain is leaking out of ears atm. 
+What I think I did:
+> Made new droplet (because was worried about files from testing in old droplet ruining something)
+> Installed apache using "https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04"
+> Installed "tree" command because it's helpful :)
+> Pulled github repo in /var/www/
+> Deleted unnecessary files (like requirements.txt; just in case, dunno the effects of having them in. Will try keeping them next time)
+> Followed steps in "https://docs.google.com/document/d/1Pm75ehn9gamzJKFJfTSJBesHlj45EgkV-e1qf-vnXxQ/edit"
+	> /var/www/marqueeSquad# chgrp -R www-data p1/
+	> /var/www/marqueeSquad# chmod -R g+w p1/
+	> Moved marqueeSquad.conf to /etc/apache2/sites-available
+	> /etc/apache2/sites-available# a2ensite marqueeSquad.conf
+	> /etc/apache2/sites-available# a2dissite 000-default.conf
+	> service apache2 restart 
+		- If error, go to debugging section of the google document
+		- Most likely, just run this:
+			> a2enmod wsgi
+			If you get the error “Module mod-wsgi does not exist!”, run the following commands:
+				$ sudo apt-get install libapache2-mod-wsgi-py3 
+				$ sudo a2enmod wsgi 
+				$ sudo service apache2 restart
+> Installed flask with "sudo pip install flask"
+> Changed ServerName in marqueeSquad.conf to new droplet ip address "167.172.128.83"
+> To run: "/var/www/marqueeSquad/p1# python3 app.py" and put "167.172.128.83" in web
 
+NOTES:
+- Pretty sure Helena made files (along with Ian, God bless him), but there was no devlog update
+- Neither directory structure nor naming structure adhere to what is recommended :)
+	/var/www/marqueeSquad
+		p1 (should be marqueeSquad)
+			app.py (should be __init__.py)
+			p1.wsgi (should be marqueeSquad.wsgi, and should be in above level)
+			templates
+				login.html
+				response.html
+- I think this is everything I did, but I'm kinda braindead so there may be some typos in the code commands given here as well as some steps that I neglected to mention.
+- I dunno how to push this to github :) Team plans to reconvene and talk about this tomorrow. 
+- This took forever to write, someone please read this.			
