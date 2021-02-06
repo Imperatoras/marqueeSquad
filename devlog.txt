@@ -56,3 +56,9 @@ NOTES:
 - I think this is everything I did, but I'm kinda braindead so there may be some typos in the code commands given here as well as some steps that I neglected to mention.
 - I dunno how to push this to github :) Team plans to reconvene and talk about this tomorrow. 
 - This took forever to write, someone please read this.			
+
+jessicaY, constanceC, helenaW -- 2021-02-06 15:10
+jessicaY -> Showed the little children (Helena's words, not mine) how I got the stuffs to work (what's listed above).
+Rearranged directory structure and filenames to what's recommended. Was a little annoying because we had to adjust file paths in the files itself, but everything's working and good to go now!
+All that's left is to make the actual website LMAO.
+Very good work session today :)
